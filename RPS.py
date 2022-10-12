@@ -19,7 +19,8 @@ def Play_Again():
         print('OK! Lets play again!!!')
         game()
     elif playAgain == 'n':
-        print('Ok goodbye...')
+        print('Ok goodbye...') 
+
 
 
 def game():
@@ -38,18 +39,20 @@ def game():
     
 
     if userAction == compAction:
-        print('Both players selected ' + userAction + 'ITS A TIE!!!')
+        print('Both players selected ' + userAction  + ' ' + 'ITS A TIE!!!')
     elif userAction == "Rock":
         if compAction == "Scissors":
             print('You chose ' + userAction)
-            sleep(3)
+            sleep(2)
+            print('The computer chose ' + compAction)
+            sleep(2)
             print ("Rock smashes scissors. YOU WIN!!!")
         else:
             print('You chose ' + userAction)
             sleep(2)
             print('The computer chose ' + compAction)
             sleep(2)
-            print ("Paper covers rock. YOU LOSE...")
+            print ("Paper covers rock. YOU LOSE!!!")
     elif userAction == "Paper":
         if compAction == "Rock":
             print('You chose ' + userAction)
@@ -79,7 +82,7 @@ def game():
 
 game()
 
-playAgain = input('Would you like to play again? y/n')
+playAgain = input('Would you like to play again? y/n ')
 
 Play_Again()
 
